@@ -9,7 +9,7 @@ cloudinary.config({
 export default async function handler(req, res) {
   try {
     const result = await cloudinary.search
-      .expression("folder:NEWS2")
+      .expression("folder:news2")
       .sort_by("created_at", "desc")
       .max_results(500)
       .execute();
